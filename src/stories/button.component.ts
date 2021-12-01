@@ -1,11 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
-enum myFooSizeEnum {
-    small = 'small foo',
-    medium = 'medium foo',
-    large = 'large foo'
-}
-
 @Component({
   selector: 'storybook-button',
   template: ` <button
@@ -14,7 +8,7 @@ enum myFooSizeEnum {
     [ngClass]="classes"
     [ngStyle]="{ 'background-color': backgroundColor }"
   >
-    {{ label }} - {{myFooSizeProperty[size]}}
+    {{ label }}
   </button>`,
   styleUrls: ['./button.css'],
 })
@@ -50,11 +44,6 @@ export default class ButtonComponent {
    */
   @Output()
   onClick = new EventEmitter<Event>();
-
-  /**
-   * Enum assigned to property
-   */
-  myFooSizeProperty = myFooSizeEnum
 
   public get classes(): string[] {
     const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';
