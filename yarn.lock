@@ -6393,6 +6393,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chromatic@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "chromatic@npm:6.1.0"
+  bin:
+    chroma: bin/main.cjs
+    chromatic: bin/main.cjs
+    chromatic-cli: bin/main.cjs
+  checksum: 2de5227f5d5f9da973f47dfba2a4092eac83cef74ea78101eb81c80c8f50f6f43904c3b499838e60a178de02c3518c0bb80241f8df4266894919c87f7a2ed318
+  languageName: node
+  linkType: hard
+
 "chrome-trace-event@npm:^1.0.2":
   version: 1.0.3
   resolution: "chrome-trace-event@npm:1.0.3"
@@ -8086,6 +8097,7 @@ __metadata:
     "@types/node": ^12.11.1
     "@webcomponents/custom-elements": ^1.5.0
     babel-loader: ^8.2.3
+    chromatic: ^6.1.0
     rxjs: ~6.6.0
     tslib: ^2.3.0
     typescript: ~4.3.5
