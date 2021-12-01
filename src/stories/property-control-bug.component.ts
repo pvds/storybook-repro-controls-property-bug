@@ -5,8 +5,22 @@ enum myEnum {
     bar = 'bar value',
 }
 
+const myObject = {
+    foo: 'foo value',
+    bar: 'bar value',
+} as const;
+
+const myArray = [
+    'foo',
+    'bar',
+];
+
+const myNumber = 42;
+
+const myBoolean = true;
+
 @Component({
-    selector: 'storybook-enum-bug',
+    selector: 'storybook-property-control-bug',
     template: `
         <h1>Enum bug reproduction</h1>
         <div>
@@ -23,7 +37,7 @@ enum myEnum {
         </div>
     `,
 })
-export default class EnumBugComponent {
+export default class PropertyControlBugComponent {
     /**
      * Enum assigned to property
      *
@@ -36,4 +50,34 @@ export default class EnumBugComponent {
      * Enum assigned to property but excluded from controls in the story renders as expected
      */
     myEnumPropertyExcludedFromControls = myEnum;
+
+    /**
+     * Object variable assigned to property
+     */
+    myObjectProperty = myObject;
+    myObjectPropertyDirectlyAssigned = {
+        foo: 'foo value',
+        bar: 'bar value',
+    };
+
+    /**
+     * Array variable assigned to property
+     */
+    myArrayProperty = myArray;
+    myArrayPropertyDirectlyAssigned = [
+        'foo',
+        'bar',
+    ];
+
+    /**
+     * Number variable assigned to property
+     */
+    myNumberProperty = myNumber;
+    myNumberPropertyDirectlyAssigned = 42;
+
+    /**
+     * Boolean variable assigned to property
+     */
+    myBooleanProperty = myBoolean;
+    myBooleanPropertyDirectlyAssigned = true;
 }

@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/angular/types-6-0';
-import EnumBugComponent from "./enum-bug.component";
+import PropertyControlBugComponent from "./property-control-bug.component";
 
 export default {
-    title: 'Example/Enum Bug',
-    component: EnumBugComponent,
+    title: 'Reproduction/Property Control Bug',
+    component: PropertyControlBugComponent,
     parameters: {
         controls: {
             exclude: ['myEnumPropertyExcludedFromControls']
@@ -11,7 +11,7 @@ export default {
     }
 } as Meta;
 
-const Template: Story<EnumBugComponent> = (args: EnumBugComponent) => ({
+const Template: Story<PropertyControlBugComponent> = (args: PropertyControlBugComponent) => ({
     props: args,
 });
 
